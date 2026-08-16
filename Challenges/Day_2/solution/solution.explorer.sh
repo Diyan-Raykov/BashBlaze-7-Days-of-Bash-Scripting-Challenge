@@ -1,11 +1,11 @@
-echo "Wellcome"
+echo "Welcome to the Interactive File and Directory Explorer!"
 
-read -p "enter a line of text:" input
+input="sample"
+#read -p "Enter a line of text (Press Enter without text to exit): Hello, this is a sample line." input
 until [[ -z "$input" ]]
 do
-        ls -lah
+	find . -type f -exec file {} \; 
+        #ls -lah
         echo -n "$input" | wc -m
-        #ls -ltra ./
-        #read -p "enter a line of text:" input
-        read -p "enter a line of text:" input
+        read -p "Enter a line of text (Press Enter without text to exit): Hello, this is a sample line." input
 done;
