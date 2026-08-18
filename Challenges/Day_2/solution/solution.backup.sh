@@ -5,7 +5,7 @@ read -p "enter directory you want to use as backup storage " DirInput
 
 #backup location
 
-backup_location=$($DirInput)backup_$(date +%Y-%m-%d_%H-%M-%S)
+backup_location=$($DirInput)backup_$(date +%Y-%m-%d_%H-%M-%S) 2>/dev/null
 
 #make backup directory
 
